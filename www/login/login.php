@@ -26,15 +26,17 @@
 					user:$("[name='user']").val(),
 					passwd:$("[name='passwd']").val()
 				},function(data){
-					if(data == "1") {
+					if(data == "0") {
 						$("#notice").text("登录成功，2秒后跳转");
 						setTimeout(function(){
 							window.location.replace("login_success.php");
 						},2000);
 						
-					}else{
+					}else if(data == "1"){
 						$("[name='passwd']").val("");
 						$("#notice").text("用户名或密码错误");
+					}else{
+						$("#notice").text("数据库连接错误:"+data);
 					}
 				});
 			});
