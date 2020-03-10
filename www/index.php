@@ -14,7 +14,7 @@
 			}
 		}while(false);
 		//如果未登录或登录时间超过一天，则跳转至登录页面
-		echo '<meta http-equiv="refresh" content="2;url=login.php">';
+		echo '<meta http-equiv="refresh" content="2;url=login/login.php">';
 	?>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/animation.css">

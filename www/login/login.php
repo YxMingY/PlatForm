@@ -2,10 +2,10 @@
 <html>
 <head>
 	<title>请宁登录</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/animation.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/animation.css">
 	<meta charset="utf-8">
-	<script src="js/jquery-3.4.1.js"></script>
+	<script src="../js/jquery-3.4.1.js"></script>
 </head>
 <body>
 
@@ -28,7 +28,7 @@
 					passwd:$("[name='passwd'").val()
 				},function(data){
 					if(data == "1") {
-						$(location).attr("login_success.php");
+						window.location.replace("login_success.php");
 					}
 				});
 			});
