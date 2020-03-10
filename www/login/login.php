@@ -22,14 +22,16 @@
 	<script type="text/javascript">
 		$(function(){
 			$("[type='button']").click(function(){
-				//alert("aa");
 				$.post("verify.php",{
 					user:$("[name='user']").val(),
-					passwd:$("[name='passwd]'").val()
+					passwd:$("[name='passwd']").val()
 				},function(data){
 					if(data == "1") {
 						$("#notice").text("登录成功，2秒后跳转");
-						window.location.replace("login_success.php");
+						setTimeout(function(){
+							window.location.replace("login_success.php");
+						},2000);
+						
 					}else{
 						$("[name='passwd']").val("");
 						$("#notice").text("用户名或密码错误");
