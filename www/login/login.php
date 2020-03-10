@@ -10,7 +10,7 @@
 <body>
 
 	<form id="main" method="post">
-		<!-- <div id="cap">请宁登录</div> -->
+		<div id="notice"></div>
 		<div class="item wrap slide-right">
 			<input class="input" type="input" name="user" placeholder="账号" required>
 		</div>
@@ -24,11 +24,15 @@
 			$("[type='button']").click(function(){
 				//alert("aa");
 				$.post("verify.php",{
-					user:$("[name='user'").val(),
-					passwd:$("[name='passwd'").val()
+					user:$("[name='user']").val(),
+					passwd:$("[name='passwd]'").val()
 				},function(data){
 					if(data == "1") {
+						$("#notice").text("登录成功，2秒后跳转");
 						window.location.replace("login_success.php");
+					}else{
+						$("[name='passwd']").val("");
+						$("#notice").text("用户名或密码错误");
 					}
 				});
 			});

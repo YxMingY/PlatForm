@@ -16,7 +16,6 @@ body{
 	background-color: #f2eada;
 	width: 850px;
 	height: 100vh;
-	padding-top: 150px;
 	text-align: center;
 	border-radius: 50px;
 	display: block;
@@ -24,7 +23,7 @@ body{
 	overflow: hidden;
 }
 
-#cap{
+#notice{
 	width: 850px;
 	height: 150px;
 	line-height: 150px;
