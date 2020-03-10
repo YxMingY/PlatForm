@@ -22,6 +22,11 @@ function login_verify(string $user,string $passwd):string
 	unset($db);
 	return $verify;
 }
-if (isset($_POST["user"]))
-	echo login_verify($_POST["user"],$_POST["passwd"]);
+if (isset($_POST["user"])){
+	if(($v=login_verify($_POST["user"],$_POST["passwd"])) == "0") {
+		session_start();
+		$_SESSION['login_timeout'] = time() + 3600;
+	}
+	echo $v;
+}
 
