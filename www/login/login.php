@@ -29,7 +29,7 @@
 					if(data == "0") {
 						$("#notice").text("登录成功，2秒后跳转");
 						setTimeout(function(){
-							window.location.replace("login_success.php");
+							window.location.replace("../index.php");
 						},2000);
 						
 					}else if(data == "1"){
