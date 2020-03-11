@@ -20,7 +20,7 @@
 	<meta charset="utf-8">
 <body>
 	<div id="main">
-		<div style="margin-top: 200px;height: 500px" class="item slide-right">
+		<div style="margin-top: 200px" class="item slide-right">
 			<?php 
 			if($login){
 				echo "你已登录，但这没什么卵用, 因为你现在被我取消登录了，8秒后跳转";

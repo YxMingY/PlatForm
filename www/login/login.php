@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/animation.css">
 	<meta charset="utf-8">
 	<script src="../js/jquery-3.4.1.js"></script>
+	<script src="../js/login.js"></script>
 </head>
 <body>
 
@@ -14,33 +15,12 @@
 		<div class="item wrap slide-right">
 			<input class="input" type="input" name="user" placeholder="账号" required>
 		</div>
-		<div class="item wrap slide-left">
+		<div class="item wrap slide-right">
 			<input class="input" type="input" name="passwd" placeholder="密码" required>
 		</div>
-		<input class="item slide-right" type="button" value="Biu ~">
+		<input class="item slide-right"  type="button" value="Biu ~">
+		<br />
+		<a href="reg.php">莫得账号？要不注册一个撒？</a>
 	</form>
-	<script type="text/javascript">
-		$(function(){
-			$("[type='button']").click(function(){
-				$.post("verify.php",{
-					user:$("[name='user']").val(),
-					passwd:$("[name='passwd']").val()
-				},function(data){
-					if(data == "0") {
-						$("#notice").text("登录成功，2秒后跳转");
-						setTimeout(function(){
-							window.location.replace("../index.php");
-						},2000);
-						
-					}else if(data == "1"){
-						$("[name='passwd']").val("");
-						$("#notice").text("用户名或密码错误");
-					}else{
-						$("#notice").text("数据库连接错误:"+data);
-					}
-				});
-			});
-		});
-	</script>
 </body>
 </html>
