@@ -18,7 +18,7 @@
 		<div class="item wrap slide-right">
 			<input class="input" type="input" name="passwd" placeholder="密码" required>
 		</div>
-		<input class="item slide-right"  type="button" value="Biu ~">
+		<input class="item slide-right"  type="button" value="登录">
 		<br />
 		<a href="reg.php">莫得账号？要不注册一个撒？</a>
 	</form>

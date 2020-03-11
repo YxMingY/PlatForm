@@ -14,7 +14,6 @@ $(function(){
 				passwd:passwd,
 				vcode:vcode
 			},function(data){
-				alert(data);
 				if(data == "0") {
 					$("#notice").text("注册成功，2秒后跳转");
 					setTimeout(function(){
