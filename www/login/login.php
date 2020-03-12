@@ -7,6 +7,7 @@
 	<meta charset="utf-8">
 	<script src="../js/jquery-3.4.1.js"></script>
 	<script src="../js/login.js"></script>
+	<script src="../js/scale-suit.js"></script>
 </head>
 <body>
 

@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>这是啥平台来着</title>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/scale-suit.js"></script>
 	<?php
 		session_start();
 		if (!isset($_SESSION['login_timeout']) || $_SESSION['login_timeout'] < time()) {
