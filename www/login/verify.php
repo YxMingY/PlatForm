@@ -5,12 +5,12 @@ function login_verify(string $user,string $passwd):string
 	$db = new  yxmingy\Mysql('rm-m5e936c6x8o4g3q3buo.mysql.rds.aliyuncs.com',  'ndt_001', 'aqi275466_', 'tnb');
 	$verify = 1;
 	if($db->connected()) {
-		$res = $db->select("用户基本信息","密码","账号='".$user."'");
+		$res = $db->select("user_info","密码","账号='".$user."'");
 		foreach ($res as $real_wd) {
 			if($real_wd['密码'] == $passwd)
 				$verify = 0;
 		}
-		$res = $db->select("用户基本信息","密码","姓名='".$user."'");
+		$res = $db->select("user_info","密码","姓名='".$user."'");
 		foreach ($res as $real_wd) {
 			if($real_wd['密码'] == $passwd)
 				$verify = 0;
