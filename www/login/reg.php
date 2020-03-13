@@ -31,6 +31,8 @@
 			<?php echo '<div class="vcode-img wrap"  style="background-image: url(\'../img/vcode/'.$id.'.png\');"></div>'; ?>
 		</div>
 		<input class="item slide-left" type="button" value="注册">
+		<br />
+		<a href="login.php">啥子？你说你其实有账号嘛</a>
 	</form>
 </body>
 </html>

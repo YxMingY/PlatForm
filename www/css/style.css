@@ -107,6 +107,8 @@ body{
 a{
 	color: rgba(0,0,0,0.5);
 	font-size: 30px;
+	height: 30px;
+	display: inline-block;
 	position: relative;
 	left: 150px;
 	top: -50px;
