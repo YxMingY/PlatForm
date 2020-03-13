@@ -20,6 +20,7 @@ if (isset($_POST["user"])){
 		$db->a_insert("user_info",["账号","密码"],[$_POST["user"],$_POST["passwd"]]);
 		$res = $db->select("user_info","账号","账号='".$_POST["user"]."'");
 		if(!empty($res)) {
+			unlink("../img/vcode/".session_id()."png");
 			echo "0";
 		}else {
 			echo "3";
